@@ -1,13 +1,15 @@
-import React from 'react';
+import React from "react";
 
-import './styles.css';
+import "./styles.css";
 
 function RootLayout({ children }) {
+  const timestamp = new Date().toLocaleString();
+
   return (
     <html lang="en">
       <body>
         {children}
-
+        <footer>Generated at: {timestamp}</footer>
       </body>
     </html>
   );
